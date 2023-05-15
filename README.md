@@ -7,16 +7,24 @@ El procesador de facturas es capaz de procesar facturas en archivos .eml o .msg,
 ## InvoiceRetrievalWindow: 
 Esta es la clase de la ventana principal de la aplicación. Maneja la interfaz de usuario y coordina las acciones del usuario.
 
-![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/a8a8d791-1c8f-4fb6-8422-550c746f3824)
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/870b6e11-e592-4134-b8e4-91b906d96c4e)
 
 ## InvoicePromptsWindow: 
 Una ventana de la interfaz de usuario que permite al usuario configurar las solicitudes de facturas.
+
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/a8f78c92-13ad-4a44-aadb-eb769e242083)
+
 ## EmailUtils: 
 Una clase de utilidad para manejar tareas comunes relacionadas con el procesamiento de correos electrónicos.
+
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/7483002f-3fcb-40a9-a454-7c808da6f2bb)
+
 ## Utils: 
 Una clase de utilidad para realizar varias tareas, como la manipulación de tokens y la gestión de archivos.
 ## InvoiceProcessor: 
 Esta es la clase principal que maneja el procesamiento de las facturas. Coordina la extracción de datos de las facturas y la generación de informes.
+
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/6392e68a-7d9e-41e4-b78f-d11dbae242f9)
 
 # Requisitos
 Para utilizar este proyecto, necesitarás lo siguiente:
