@@ -4,11 +4,16 @@ Este proyecto es un procesador de facturas desarrollado en Python, que utiliza t
 # Descripción General
 El procesador de facturas es capaz de procesar facturas en archivos .eml o .msg, extraer datos de la cabecera y detalle de las facturas y almacenarlos para su posterior análisis. Este proyecto incluye varias clases principales:
 
-## InvoiceRetrievalWindow: Esta es la clase de la ventana principal de la aplicación. Maneja la interfaz de usuario y coordina las acciones del usuario.
-## InvoicePromptsWindow: Una ventana de la interfaz de usuario que permite al usuario configurar las solicitudes de facturas.
-## EmailUtils: Una clase de utilidad para manejar tareas comunes relacionadas con el procesamiento de correos electrónicos.
-## Utils: Una clase de utilidad para realizar varias tareas, como la manipulación de tokens y la gestión de archivos.
-## InvoiceProcessor: Esta es la clase principal que maneja el procesamiento de las facturas. Coordina la extracción de datos de las facturas y la generación de informes.
+## InvoiceRetrievalWindow: 
+Esta es la clase de la ventana principal de la aplicación. Maneja la interfaz de usuario y coordina las acciones del usuario.
+## InvoicePromptsWindow: 
+Una ventana de la interfaz de usuario que permite al usuario configurar las solicitudes de facturas.
+## EmailUtils: 
+Una clase de utilidad para manejar tareas comunes relacionadas con el procesamiento de correos electrónicos.
+## Utils: 
+Una clase de utilidad para realizar varias tareas, como la manipulación de tokens y la gestión de archivos.
+## InvoiceProcessor: 
+Esta es la clase principal que maneja el procesamiento de las facturas. Coordina la extracción de datos de las facturas y la generación de informes.
 
 # Requisitos
 Para utilizar este proyecto, necesitarás lo siguiente:
