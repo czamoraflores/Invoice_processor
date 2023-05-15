@@ -6,6 +6,9 @@ El procesador de facturas es capaz de procesar facturas en archivos .eml o .msg,
 
 ## InvoiceRetrievalWindow: 
 Esta es la clase de la ventana principal de la aplicación. Maneja la interfaz de usuario y coordina las acciones del usuario.
+
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/a8a8d791-1c8f-4fb6-8422-550c746f3824)
+
 ## InvoicePromptsWindow: 
 Una ventana de la interfaz de usuario que permite al usuario configurar las solicitudes de facturas.
 ## EmailUtils: 
