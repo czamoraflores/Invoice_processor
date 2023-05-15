@@ -51,6 +51,9 @@ Para usar este proyecto, sigue estos pasos:
 
 Navega a la carpeta del proyecto.
 Ejecuta el script principal con el comando python main.py.
+
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/5c5c1689-1ef7-4313-ba97-140e4789b988)
+
 Aparecerá la ventana de la aplicación. Desde aquí, puedes cargar archivos de correo electrónico para el procesamiento de facturas, ajustar la configuración según tus necesidades y comenzar el proceso de extracción de facturas.
 
 # Contribución
