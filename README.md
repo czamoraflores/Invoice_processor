@@ -25,7 +25,7 @@ Una clase de utilidad para realizar varias tareas, como la manipulación de toke
 ## InvoiceProcessor (clase): 
 Esta es la clase principal que maneja el procesamiento de las facturas. Coordina la extracción de datos de las facturas y la generación de informes.
 
-![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/6392e68a-7d9e-41e4-b78f-d11dbae242f9)
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/d4650968-e23a-4bbd-8ee5-5fa3f22b68c3)
 
 ### process_invoices_offline: 
 Este es el método principal de la clase InvoiceProcessor. Itera sobre todos los archivos de email en un directorio especificado, extrae los datos de las facturas de cada archivo y luego guarda esos datos en una lista.
