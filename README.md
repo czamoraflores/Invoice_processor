@@ -17,7 +17,7 @@ Una ventana de la interfaz de usuario que permite al usuario configurar las soli
 ## EmailUtils (clase): 
 Una clase de utilidad para manejar tareas comunes relacionadas con el procesamiento de correos electrónicos.
 
-![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/7483002f-3fcb-40a9-a454-7c808da6f2bb)
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/f06d620c-d628-4c5e-bd81-a241dd92471e)
 
 ## Utils (clase): 
 Una clase de utilidad para realizar varias tareas, como la manipulación de tokens y la gestión de archivos.
