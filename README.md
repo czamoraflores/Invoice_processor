@@ -9,6 +9,29 @@ Esta es la clase de la ventana principal de la aplicación. Maneja la interfaz d
 
 ![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/870b6e11-e592-4134-b8e4-91b906d96c4e)
 
+A continuación una descripción de las partes clave del código:
+
+### Importaciones: 
+El código importa una serie de módulos necesarios, como os para la interacción con el sistema operativo, QFileDialog para abrir cuadros de diálogo de archivos, QLineEdit para campos de entrada de texto, QGroupBox para agrupar elementos de interfaz de usuario, QStatusBar para mostrar información de estado, QProgressDialog para mostrar una barra de progreso, loadUi para cargar interfaces de usuario de archivos .ui, Qt para constantes de Qt, y varios módulos de controladores, vistas, gestores y utilidades específicos del proyecto.
+
+### Inicialización y configuración de la ventana: 
+En el método __init__, se inicializan y configuran varios elementos de la interfaz de usuario, incluyendo la carga de la interfaz de usuario desde un archivo .ui, la configuración de las traducciones, la validación y actualización de las rutas de los cuadros de texto, la configuración de la barra de estado, y la configuración de los cuadros de combinación.
+
+### Gestión de eventos: 
+Se proporcionan varios métodos para manejar los eventos de la interfaz de usuario, como abrir la ventana de indicaciones de factura (open_invoice_prompts_window), guardar parámetros (save_params), elegir carpetas para varios propósitos (choose_tesseract_folder, choose_email_eml_folder, choose_data_folder, choose_email_msg_folder), y aplicar traducciones (apply_translations_to_invoice_window).
+
+### Manipulación de cuadros de combinación: 
+Los métodos add_items_to_file_type_combo_box, add_items_to_content_type_combo_box, y setup_language_combo_box añaden elementos a los cuadros de combinación y establecen los valores por defecto.
+
+### Gestión de la interfaz de usuario: 
+Métodos como disable_inputs, init_progress_dialog, update_status_bar, print_results, update_actions_and_buttons, toggle_password_visibility, y params_changed se encargan de actualizar la interfaz de usuario en respuesta a varios eventos.
+
+### Procesamiento de correos: 
+Los métodos connect_and_retrieve_attachments_triggered y offline_email_processing se encargan de la conexión y recuperación de adjuntos de correo y del procesamiento de correos en línea y fuera de línea.
+
+### Obtención de parámetros de la interfaz: 
+El método get_params_interfaz recoge los parámetros de la interfaz de usuario para su uso en el procesamiento de correos.
+
 ## InvoicePromptsWindow (interfaz): 
 Una ventana de la interfaz de usuario que permite al usuario configurar las solicitudes de facturas.
 
