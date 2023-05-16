@@ -66,9 +66,21 @@ Esta es la clase de la ventana principal de la aplicación. Maneja la interfaz d
 - `get_params_interfaz`: Obtiene los parámetros de la interfaz de usuario para el procesamiento de facturas.
 
 ### **2. InvoicePromptsWindow (Interfaz):**
-Una ventana de la interfaz de usuario que permite al usuario configurar las solicitudes de facturas.
+Una ventana de la interfaz de usuario que permite al usuario configurar los prompts o texto que se envian por medio de la api de openAI.
 
    ![InvoicePromptsWindow UI](https://github.com/czamoraflores/Invoice_processor/assets/103855330/a8f78c92-13ad-4a44-aadb-eb769e242083)
+
+- `__init__`: Este método inicializa la ventana de indicaciones de facturas. Configura la interfaz de usuario y establece las conexiones y widgets necesarios. También conecta el botón de guardar parámetros con su correspondiente método.
+
+- `save_params`: Guarda los parámetros de las indicaciones de facturas utilizando el método `save_params_txtprompts` de `UIManager`. Deshabilita el botón de guardar parámetros después de guardar.
+
+- `prompt_params_changed`: Habilita el botón de guardar parámetros cuando los parámetros de las indicaciones cambian.
+
+- `get_params_interfaz`: Obtiene los parámetros de la interfaz de usuario. Los parámetros incluyen los textos de las indicaciones para las facturas y las órdenes.
+
+- `update_token_count`: Cuenta el número de tokens en el texto de la indicación actual. Utiliza el método `get_dynamic_max_tokens` de la clase `Utils` para hacer esto.
+
+- `on_txtPrompt_textChanged`: Este método se activa cuando el texto en `txtPrompt` cambia. Cuenta el número de tokens en el texto actual. Si el número de tokens supera el límite permitido, restaura el texto al último texto válido y mueve el cursor a su posición anterior. También actualiza los contadores de tokens en la interfaz de usuario.
 
 ### **3. EmailUtils (Clase):**
 Una clase de utilidad para manejar tareas comunes relacionadas con el procesamiento de correos electrónicos.
