@@ -123,13 +123,44 @@ Esta es la clase principal que maneja el procesamiento de las facturas. Coordina
 Este formato debería funcionar bien en GitHub y proporcionar una descripción detallada de las clases y métodos principales de tu proyecto.
 
 ### **6. TextProcessor (Clase):**
+
 Una clase de utilidad diseñada para manejar tareas comunes relacionadas con el procesamiento de texto y JSON.
 
 - `__init__`: Inicializa la clase `TextProcessor` con un conjunto de traducciones.
 
 - `split_text_into_segments`: Divide un texto en segmentos basándose en un número máximo de tokens.
 
-- `is_date`: (Continuar con la descripción del método...)
+- `is_date(value)`: Verifica si un valor dado es una fecha válida.
+
+`homologate_date(value)`: Homologa una fecha dada en un formato específico.
+
+`consolidate_invoice_data(header_invoice_data, detail_invoice_data)`: Consolida los datos de una factura, incluyendo los datos del encabezado y del detalle.
+
+`clean_invalid_json(json_string, max_attempts)`: Limpia una cadena JSON inválida, corrigiendo posibles errores de formato.
+
+`is_valid_json(json_string)`: Verifica si una cadena dada es un objeto JSON válido.
+
+`clean_text_before_json(text)`: Limpia un texto antes de convertirlo a JSON, eliminando caracteres no deseados.
+
+`complete_truncated_json(json_string)`: Completa un objeto JSON truncado añadiendo campos vacíos.
+
+`remove_watermark(text)`: Elimina marcas de agua de un texto dado.
+
+`remove_header_footer(text)`: Elimina encabezados y pies de página de un texto dado.
+
+`detect_language(text, full_name)`: Detecta el idioma de un texto dado.
+
+`generate_custom_id(config, email_subject, timestamp)`: Genera un ID personalizado basado en ciertos parámetros y un timestamp.
+
+`generate_email_subject_code(email_subject)`: Genera un código corto basado en el asunto de un correo electrónico.
+
+`clean_invoice_text(text)`: Limpia un texto de factura, eliminando marcas de agua y encabezados/pies de página.
+
+`classify_email(text)`: Clasifica un correo electrónico en una categoría específica.
+
+`clean_email_text(text)`: Limpia un texto de correo electrónico eliminando elementos no deseados y conservando solo información relevante.
+
+`clean_prompt(prompt)`: Limpia un texto de instrucción (prompt) eliminando saltos de línea y espacios en blanco adicionales.
 
 ## **Requisitos** 📋
 Para utilizar este proyecto, necesitarás lo siguiente:
