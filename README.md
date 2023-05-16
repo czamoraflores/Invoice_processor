@@ -12,7 +12,7 @@ Este proyecto es un procesador de facturas desarrollado en Python, que utiliza t
 - [Contacto](#contacto)
 
 ## **Descripción General** 📝
-El procesador de facturas es capaz de procesar facturas en archivos `.eml` o `.msg`, extraer datos de la cabecera y detalle de las facturas y almacenarlos para su posterior análisis.
+El procesador de facturas es capaz de procesar facturas en archivos `.eml` o `.msg`, extraer datos de la cabecera y detalle de las facturas y almacenarlos para su posterior análisis con openAI.
 
 ## **Clases y Métodos Principales** 👩‍💻
 El proyecto incluye varias clases principales y métodos:
