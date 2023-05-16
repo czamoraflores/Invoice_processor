@@ -122,6 +122,17 @@ Esta es la clase principal que maneja el procesamiento de las facturas. Coordina
 - `adjust_columns_width_and_rows_height`: Este método ajusta el ancho de las columnas y el alto de las filas en el archivo Excel resultante para que todos los datos sean visibles y fácilmente legibles.
 Este formato debería funcionar bien en GitHub y proporcionar una descripción detallada de las clases y métodos principales de tu proyecto.
 
+### **6. TextProcessor (Clase):**
+Una clase de utilidad diseñada para manejar tareas comunes relacionadas con el procesamiento de texto y JSON.
+
+   ![TextProcessor](https://github.com/czamoraflores/Invoice_processor/assets/103855330/f06d620c-d628-4c5e-bd81-a241dd92471e)
+
+- `__init__`: Inicializa la clase `TextProcessor` con un conjunto de traducciones.
+
+- `split_text_into_segments`: Divide un texto en segmentos basándose en un número máximo de tokens.
+
+- `is_date`: (Continuar con la descripción del método...)
+
 ## **Requisitos** 📋
 Para utilizar este proyecto, necesitarás lo siguiente:
 
