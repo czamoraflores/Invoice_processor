@@ -182,7 +182,7 @@ Una clase que se encarga de procesar archivos, como archivos MSG y EML. Tiene lo
 
 `process_eml_file(self, file_path)`: Procesa un archivo EML especificado por file_path. Extrae el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico adjuntos, como imágenes y PDFs. Utiliza la biblioteca email.parser para extraer los datos del archivo EML. Luego, procesa las imágenes y PDFs adjuntos utilizando Tesseract OCR y devuelve el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico combinados.
 
-`process_msg_file_disk(self, file_path): Procesa un archivo MSG especificado por file_path directamente desde el disco. Extrae el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico adjuntos, como imágenes y PDFs. Utiliza la biblioteca extract_msg para extraer los datos del archivo MSG. Luego, procesa las imágenes y PDFs adjuntos utilizando Tesseract OCR y aplica la limpieza del texto de factura utilizando text_processor. Devuelve el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico combinados.
+`process_msg_file_disk(self, file_path)`: Procesa un archivo MSG especificado por file_path directamente desde el disco. Extrae el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico adjuntos, como imágenes y PDFs. Utiliza la biblioteca extract_msg para extraer los datos del archivo MSG. Luego, procesa las imágenes y PDFs adjuntos utilizando Tesseract OCR y aplica la limpieza del texto de factura utilizando text_processor. Devuelve el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico combinados.
 
 ## **Requisitos** 📋
 Para utilizar este proyecto, necesitarás lo siguiente:
