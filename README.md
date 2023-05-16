@@ -66,7 +66,7 @@ Esta es la clase de la ventana principal de la aplicación. Maneja la interfaz d
 ### **2. InvoicePromptsWindow (Interfaz):**
 Una ventana de la interfaz de usuario que permite al usuario configurar los prompts o texto que se envian por medio de la api de openAI.
 
-![238415798-a8f78c92-13ad-4a44-aadb-eb769e242083](https://github.com/czamoraflores/Invoice_processor/assets/103855330/2d0e0de8-89bb-4c04-a57b-1c3098466548)
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/b1327bcc-5b7b-4558-bc68-e17e8bb9cc0e)
 
 - `__init__`: Este método inicializa la ventana de indicaciones de facturas. Configura la interfaz de usuario y establece las conexiones y widgets necesarios. También conecta el botón de guardar parámetros con su correspondiente método.
 
@@ -196,9 +196,7 @@ Una clase que se encarga de conectarse a un servidor de correo electrónico y re
 
 ![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/73e07ed1-ffe1-49eb-8765-cbb516200f69)
 
-
 Tiene los siguientes métodos:
-
 
 `__init__(self, email: str, password: str, invoice_retrieval_window, provider='gmail')`: Inicializa la clase EmailConnector con las credenciales de correo electrónico y el proveedor de correo electrónico. También carga la configuración y el servidor IMAP correspondiente al proveedor.
 
