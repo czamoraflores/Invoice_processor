@@ -87,6 +87,20 @@ Una clase de utilidad para manejar tareas comunes relacionadas con el procesamie
 
    ![EmailUtils](https://github.com/czamoraflores/Invoice_processor/assets/103855330/f06d620c-d628-4c5e-bd81-a241dd92471e)
 
+- `__init__`: Este método inicializa la clase `EmailUtils` con un formato de entrada y un formato de salida.
+
+- `convert`: Este método toma una cadena de fecha y la convierte a un objeto de fecha utilizando `datetime.strptime` con el formato de entrada establecido durante la inicialización.
+
+- `get_email_body_content`: Este método toma el cuerpo de un mensaje y devuelve el contenido en función del tipo de datos de entrada. Si el cuerpo del mensaje es una cadena, la devuelve tal cual. Si es un diccionario, busca las claves "plain" y "html" y devuelve el contenido correspondiente. Si no es ni una cadena ni un diccionario, devuelve una cadena vacía.
+
+- `convert_date`: Este método toma una cadena de fecha y la convierte al formato de salida especificado utilizando la función `parse` y `strftime`.
+
+- `convert_html_to_plain_text`: Este método toma una cadena HTML y la convierte a texto sin formato utilizando la biblioteca BeautifulSoup.
+
+- `sanitize_filename`: Este método estático recibe un nombre de archivo y elimina todos los caracteres no válidos, reemplazándolos con un guión bajo ('_').
+
+- `validate_email_and_password`: Este método estático valida un correo electrónico y una contraseña para asegurarse de que no estén vacíos.
+
 ### **4. Utils (Clase):**
 Una clase de utilidad para realizar varias tareas, como la manipulación de tokens y la gestión de archivos.
 
