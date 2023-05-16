@@ -18,7 +18,7 @@ El proyecto incluye varias clases principales y métodos:
 ### **1. InvoiceRetrievalWindow (Interfaz):**
 Esta es la clase de la ventana principal de la aplicación. Maneja la interfaz de usuario y coordina las acciones del usuario.
 
-![Sin título](https://github.com/czamoraflores/Invoice_processor/assets/103855330/a985d9da-46ed-4155-b855-27125364ed02)
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/a3afc25f-af5e-40a6-97dd-a39ad3f66e5c)
 
 - `__init__`: Inicializa la ventana y sus componentes. Carga las traducciones y actualiza los campos de texto con las rutas validadas.
 
