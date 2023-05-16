@@ -272,7 +272,7 @@ Para utilizar este proyecto, necesitarás lo siguiente:
 ## **Instalación** 💻
 Para instalar este proyecto, sigue estos pasos:
 
-1. Clona este repositorio en tu máquina local usando https://github.com/czamoraflores/REPOSITORY.git.
+1. Clona este repositorio en tu máquina local usando https://github.com/czamoraflores/Invoice_processor.git.
 2. Navega a la carpeta del proyecto.
 3. Instala los requisitos utilizando pip:
    ```shell
