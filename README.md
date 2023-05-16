@@ -11,10 +11,9 @@ Esta es la clase de la ventana principal de la aplicación. Maneja la interfaz d
 
 A continuación una descripción de las partes clave del código:
 
-### Importaciones: #### El código importa una serie de módulos necesarios, como os para la interacción con el sistema operativo, QFileDialog para abrir cuadros de diálogo de archivos, QLineEdit para campos de entrada de texto, QGroupBox para agrupar elementos de interfaz de usuario, QStatusBar para mostrar información de estado, QProgressDialog para mostrar una barra de progreso, loadUi para cargar interfaces de usuario de archivos .ui, Qt para constantes de Qt, y varios módulos de controladores, vistas, gestores y utilidades específicos del proyecto.
+**Importaciones:** El código importa una serie de módulos necesarios, como os para la interacción con el sistema operativo, QFileDialog para abrir cuadros de diálogo de archivos, QLineEdit para campos de entrada de texto, QGroupBox para agrupar elementos de interfaz de usuario, QStatusBar para mostrar información de estado, QProgressDialog para mostrar una barra de progreso, loadUi para cargar interfaces de usuario de archivos .ui, Qt para constantes de Qt, y varios módulos de controladores, vistas, gestores y utilidades específicos del proyecto.
 
-### Inicialización y configuración de la ventana: 
-En el método __init__, se inicializan y configuran varios elementos de la interfaz de usuario, incluyendo la carga de la interfaz de usuario desde un archivo .ui, la configuración de las traducciones, la validación y actualización de las rutas de los cuadros de texto, la configuración de la barra de estado, y la configuración de los cuadros de combinación.
+**Inicialización y configuración de la ventana:** En el método __init__, se inicializan y configuran varios elementos de la interfaz de usuario, incluyendo la carga de la interfaz de usuario desde un archivo .ui, la configuración de las traducciones, la validación y actualización de las rutas de los cuadros de texto, la configuración de la barra de estado, y la configuración de los cuadros de combinación.
 
 ### Gestión de eventos: 
 Se proporcionan varios métodos para manejar los eventos de la interfaz de usuario, como abrir la ventana de indicaciones de factura (open_invoice_prompts_window), guardar parámetros (save_params), elegir carpetas para varios propósitos (choose_tesseract_folder, choose_email_eml_folder, choose_data_folder, choose_email_msg_folder), y aplicar traducciones (apply_translations_to_invoice_window).
