@@ -66,7 +66,7 @@ Esta es la clase de la ventana principal de la aplicación. Maneja la interfaz d
 ### **2. InvoicePromptsWindow (Interfaz):**
 Una ventana de la interfaz de usuario que permite al usuario configurar los prompts o texto que se envian por medio de la api de openAI.
 
-   ![InvoicePromptsWindow UI](https://github.com/czamoraflores/Invoice_processor/assets/103855330/a8f78c92-13ad-4a44-aadb-eb769e242083)
+![238415798-a8f78c92-13ad-4a44-aadb-eb769e242083](https://github.com/czamoraflores/Invoice_processor/assets/103855330/2d0e0de8-89bb-4c04-a57b-1c3098466548)
 
 - `__init__`: Este método inicializa la ventana de indicaciones de facturas. Configura la interfaz de usuario y establece las conexiones y widgets necesarios. También conecta el botón de guardar parámetros con su correspondiente método.
 
