@@ -22,6 +22,49 @@ Esta es la clase de la ventana principal de la aplicación. Maneja la interfaz d
 
    ![InvoiceRetrievalWindow UI](https://github.com/czamoraflores/Invoice_processor/assets/103855330/870b6e11-e592-4134-b8e4-91b906d96c4e)
 
+- `__init__`: Inicializa la ventana y sus componentes. Carga las traducciones y actualiza los campos de texto con las rutas validadas.
+
+- `open_invoice_prompts_window`: Abre la ventana de propuestas de facturas.
+
+- `on_params_saved`: Actualiza la barra de estado cuando se guardan los parámetros.
+
+- `save_params`: Llama al método `save_params` del gestor de la interfaz de usuario.
+
+- Métodos para seleccionar las carpetas de archivos:
+    - `choose_tesseract_folder`
+    - `choose_email_eml_folder`
+    - `choose_data_folder`
+    - `choose_email_msg_folder`
+  
+- `apply_translations_to_invoice_window`: Aplica las traducciones a la interfaz de usuario de la ventana de facturas.
+
+- Métodos para añadir elementos a los cuadros combinados (comboboxes):
+    - `add_items_to_file_type_combo_box`
+    - `add_items_to_content_type_combo_box`
+    - `setup_language_combo_box`
+
+- `disable_inputs`: Desactiva todas las entradas de la interfaz de usuario.
+
+- `init_progress_dialog`: Inicializa un cuadro de diálogo de progreso.
+
+- `update_status_bar`: Actualiza la barra de estado con un mensaje dado.
+
+- `print_results`: Imprime los resultados en el cuadro de eventos de la interfaz de usuario.
+
+- `update_actions_and_buttons`: Actualiza las acciones y botones en función de la validación del correo electrónico y la contraseña.
+
+- `toggle_password_visibility`: Cambia la visibilidad de la contraseña en un campo de entrada de texto.
+
+- `params_changed`: Habilita el botón de guardado de parámetros.
+
+- `on_thread_finished`: Cierra el cuadro de diálogo de progreso cuando termina un hilo.
+
+- `connect_and_retrieve_attachments_triggered`: Inicia un hilo para conectar y recuperar los adjuntos de los correos electrónicos.
+
+- `offline_email_processing`: Procesa los correos electrónicos de forma offline utilizando la clase `InvoiceProcessor`.
+
+- `get_params_interfaz`: Obtiene los parámetros de la interfaz de usuario para el procesamiento de facturas.
+
 ### **2. InvoicePromptsWindow (Interfaz):**
 Una ventana de la interfaz de usuario que permite al usuario configurar las solicitudes de facturas.
 
