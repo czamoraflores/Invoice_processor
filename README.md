@@ -288,5 +288,5 @@ Para usar este proyecto, se requiere seguir estos pasos:
    Aparecerá la ventana de la aplicación. Desde aquí, puedes cargar archivos de correo electrónico para el procesamiento de facturas, ajustar la configuración según tus necesidades y comenzar el proceso de extracción de facturas.
 
 ## **Licencia** 📜
-Este proyecto está licenciado bajo la Licencia MIT - vea el archivo `LICENSE.md` para más detalles.
+Este proyecto está licenciado bajo la Licencia  GNU GENERAL PUBLIC LICENSE - vea el archivo `LICENSE.md` para más detalles.
 
