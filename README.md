@@ -162,6 +162,28 @@ Una clase de utilidad diseñada para manejar tareas comunes relacionadas con el 
 
 `clean_prompt(prompt)`: Limpia un texto de instrucción (prompt) eliminando saltos de línea y espacios en blanco adicionales.
 
+### **7.InvoiceExtractor (Clase):**
+
+Una clase que se encarga de extraer datos de un archivo. Tiene los siguientes métodos:
+
+`__init__(self, config, translations, openai_config, txtEvents, invoice_processor)`: Inicializa la clase InvoiceExtractor con configuraciones y objetos necesarios para el procesamiento de facturas.
+
+`extract_data_from_file(self, n_request, file_path)`: Extrae datos de un archivo especificado por file_path. Si el archivo tiene extensión .msg, utiliza el método process_msg_file de file_processor para procesarlo y obtener el asunto del correo electrónico, el cuerpo del correo electrónico y el contenido del correo electrónico. Si el archivo tiene extensión .eml, utiliza el método process_eml_file de file_processor para obtener los mismos datos. Si el archivo no tiene una extensión válida, muestra un mensaje de error. Luego, utiliza el método extract_data de openai_connector para extraer los datos de la factura y devuelve los resultados.
+
+### **8. FileProcessor (Clase):**
+
+Una clase que se encarga de procesar archivos, como archivos MSG y EML. Tiene los siguientes métodos:
+
+`__init__(self, config, translations, text_processor)`: Inicializa la clase FileProcessor con configuraciones y objetos necesarios para el procesamiento de archivos. También establece la ruta de Tesseract OCR.
+
+`process_image(self, image)`: Procesa una imagen utilizando Tesseract OCR y devuelve el texto extraído.
+
+`process_msg_file(self, file_path)`: Procesa un archivo MSG especificado por file_path. Extrae el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico adjuntos, como imágenes y PDFs. Utiliza la biblioteca extract_msg para extraer los datos del archivo MSG. Luego, procesa las imágenes y PDFs adjuntos utilizando Tesseract OCR y devuelve el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico combinados.
+
+`process_eml_file(self, file_path)`: Procesa un archivo EML especificado por file_path. Extrae el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico adjuntos, como imágenes y PDFs. Utiliza la biblioteca email.parser para extraer los datos del archivo EML. Luego, procesa las imágenes y PDFs adjuntos utilizando Tesseract OCR y devuelve el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico combinados.
+
+`process_msg_file_disk(self, file_path): Procesa un archivo MSG especificado por file_path directamente desde el disco. Extrae el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico adjuntos, como imágenes y PDFs. Utiliza la biblioteca extract_msg para extraer los datos del archivo MSG. Luego, procesa las imágenes y PDFs adjuntos utilizando Tesseract OCR y aplica la limpieza del texto de factura utilizando text_processor. Devuelve el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico combinados.
+
 ## **Requisitos** 📋
 Para utilizar este proyecto, necesitarás lo siguiente:
 
