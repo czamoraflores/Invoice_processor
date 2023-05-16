@@ -164,7 +164,11 @@ Una clase de utilidad diseñada para manejar tareas comunes relacionadas con el 
 
 ### **7.InvoiceExtractor (Clase):**
 
-Una clase que se encarga de extraer datos de un archivo. Tiene los siguientes métodos:
+Una clase que se encarga de extraer datos de un archivo. 
+
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/febddd9d-5712-4e23-b654-c96b5fb446f8)
+
+Tiene los siguientes métodos:
 
 `__init__(self, config, translations, openai_config, txtEvents, invoice_processor)`: Inicializa la clase InvoiceExtractor con configuraciones y objetos necesarios para el procesamiento de facturas.
 
@@ -172,7 +176,11 @@ Una clase que se encarga de extraer datos de un archivo. Tiene los siguientes m�
 
 ### **8. FileProcessor (Clase):**
 
-Una clase que se encarga de procesar archivos, como archivos MSG y EML. Tiene los siguientes métodos:
+Una clase que se encarga de procesar archivos, como archivos MSG y EML. 
+
+![Sin título](https://github.com/czamoraflores/Invoice_processor/assets/103855330/794cea71-f6de-482a-94f8-9d9ecf84ce38)
+
+Tiene los siguientes métodos:
 
 `__init__(self, config, translations, text_processor)`: Inicializa la clase FileProcessor con configuraciones y objetos necesarios para el procesamiento de archivos. También establece la ruta de Tesseract OCR.
 
@@ -183,6 +191,30 @@ Una clase que se encarga de procesar archivos, como archivos MSG y EML. Tiene lo
 `process_eml_file(self, file_path)`: Procesa un archivo EML especificado por file_path. Extrae el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico adjuntos, como imágenes y PDFs. Utiliza la biblioteca email.parser para extraer los datos del archivo EML. Luego, procesa las imágenes y PDFs adjuntos utilizando Tesseract OCR y devuelve el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico combinados.
 
 `process_msg_file_disk(self, file_path)`: Procesa un archivo MSG especificado por file_path directamente desde el disco. Extrae el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico adjuntos, como imágenes y PDFs. Utiliza la biblioteca extract_msg para extraer los datos del archivo MSG. Luego, procesa las imágenes y PDFs adjuntos utilizando Tesseract OCR y aplica la limpieza del texto de factura utilizando text_processor. Devuelve el asunto del mensaje, el cuerpo del mensaje y los contenidos de correo electrónico combinados.
+
+### **9. EmailConnector (Clase):**
+
+Una clase que se encarga de conectarse a un servidor de correo electrónico y recuperar los archivos adjuntos de los mensajes recibidos en un rango de fechas especificado. 
+
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/73e07ed1-ffe1-49eb-8765-cbb516200f69)
+
+
+Tiene los siguientes métodos:
+
+
+`__init__(self, email: str, password: str, invoice_retrieval_window, provider='gmail')`: Inicializa la clase EmailConnector con las credenciales de correo electrónico y el proveedor de correo electrónico. También carga la configuración y el servidor IMAP correspondiente al proveedor.
+
+`initialize_error_log_file(self)`: Crea un archivo de registro de errores vacío.
+
+`log_connection_errors(self, subject: str, date:str, message)`: Guarda los errores de conexión de correo electrónico en un archivo para inspeccionarlos posteriormente.
+
+`retrieve_attachments_from_month(self, dateStart: str, dateEnd: str)`: Recupera los archivos adjuntos de los mensajes recibidos en un rango de fechas especificado. Utiliza la biblioteca Imbox para conectarse al servidor de correo electrónico y obtener los mensajes. Crea un objeto MIMEMultipart para cada mensaje de correo electrónico, adjunta el cuerpo del mensaje y los archivos adjuntos, y guarda el correo electrónico en formato .eml. Emite señales de progreso y estado actualizado durante el proceso de recuperación de archivos adjuntos.
+
+### **10. EmailConnectorThread (Clase):**
+
+Una clase de subproceso que se utiliza para ejecutar la recuperación de archivos adjuntos desde un servidor de correo electrónico en segundo plano. Se conecta a una instancia de EmailConnector y ejecuta el método retrieve_attachments_from_month en el subproceso.
+
+`load_imap_servers(filename)`: Una función auxiliar que carga y devuelve los servidores IMAP desde un archivo JSON.
 
 ## **Requisitos** 📋
 Para utilizar este proyecto, necesitarás lo siguiente:
