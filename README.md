@@ -7,9 +7,7 @@ Este proyecto es un procesador de facturas desarrollado en Python, que utiliza t
 - [Requisitos](#requisitos)
 - [Instalación](#instalación)
 - [Uso](#uso)
-- [Contribución](#contribución)
 - [Licencia](#licencia)
-- [Contacto](#contacto)
 
 ## **Descripción General** 📝
 El procesador de facturas es capaz de procesar facturas en archivos `.eml` o `.msg`, extraer datos de la cabecera y detalle de las facturas y almacenarlos para su posterior análisis con openAI.
@@ -216,6 +214,49 @@ Una clase de subproceso que se utiliza para ejecutar la recuperación de archivo
 
 `load_imap_servers(filename)`: Una función auxiliar que carga y devuelve los servidores IMAP desde un archivo JSON.
 
+### **11. Archivos de Configuración**
+
+![image](https://github.com/czamoraflores/Invoice_processor/assets/103855330/8e9854b9-4854-4c1c-85a9-b765f13ba5fb)
+
+Este proyecto utiliza tres archivos de configuración en formato JSON. Los archivos y su contenido son los siguientes:
+
+## 11.1 `config.json`
+
+Este archivo contiene la configuración general del programa y los parámetros para la interacción con OpenAI. Aquí se almacenan las credenciales de correo electrónico, la ruta a los archivos de correo electrónico, la ruta a Tesseract, etc.
+
+{
+  "EMAIL": "agregar_mail@gmail.com",
+  "PASSWORD": "password",
+  "API_KEY": "apikey_openai",
+  //... 
+}
+
+## 11.2 `imap_servers.json`
+
+Este archivo contiene los servidores IMAP para distintos proveedores de correo electrónico. Esto se utiliza para la descarga de correos electrónicos.
+
+A continuación se muestra el contenido de este archivo:
+
+{
+  "gmail": "imap.gmail.com",
+  "yahoo": "imap.mail.yahoo.com",
+  "outlook": "imap-mail.outlook.com"
+}
+
+## 11.3 `translations.json`
+Este archivo contiene todas las traducciones utilizadas por el programa. Cada clave es un identificador único para la traducción y el valor es la traducción en sí.
+
+A continuación se muestra un ejemplo de cómo podría verse este archivo:
+
+{
+  "default_language": "en",
+  "en": {
+    //...
+  }
+}
+
+Los archivos JSON de configuración son fundamentales para que la aplicación funcione correctamente. Al cambiar estos archivos, puedes personalizar la aplicación para que se adapte a sus necesidades.
+
 ## **Requisitos** 📋
 Para utilizar este proyecto, necesitarás lo siguiente:
 
@@ -226,6 +267,7 @@ Para utilizar este proyecto, necesitarás lo siguiente:
 - dateutil
 - openpyxl
 - pandas
+- openai
 
 ## **Instalación** 💻
 Para instalar este proyecto, sigue estos pasos:
@@ -236,20 +278,15 @@ Para instalar este proyecto, sigue estos pasos:
    ```shell
    pip install -r requirements.txt
 ## **Uso** 🖥️
-Para usar este proyecto, sigue estos pasos:
+Para usar este proyecto, se requiere seguir estos pasos:
 
 1. Navega a la carpeta del proyecto.
-2. Ejecuta el script principal con el comando `python main.py`.
+2. Ejecutar el script principal con el comando `python main.py`.
 
    ![Uso](https://github.com/czamoraflores/Invoice_processor/assets/103855330/5c5c1689-1ef7-4313-ba97-140e4789b988)
 
    Aparecerá la ventana de la aplicación. Desde aquí, puedes cargar archivos de correo electrónico para el procesamiento de facturas, ajustar la configuración según tus necesidades y comenzar el proceso de extracción de facturas.
 
-## **Contribución** 🤝
-Las contribuciones son siempre bienvenidas. Por favor, lee el documento `CONTRIBUTING.md` para detalles sobre nuestro código de conducta, y el proceso de enviar pull requests.
-
 ## **Licencia** 📜
 Este proyecto está licenciado bajo la Licencia MIT - vea el archivo `LICENSE.md` para más detalles.
 
-## **Contacto** ✉️
-Si tienes alguna pregunta sobre este proyecto, por favor no dudes en contactar.
