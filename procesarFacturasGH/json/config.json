@@ -1,0 +1,115 @@
+{
+  "EMAIL": "",
+  "PASSWORD": "",
+  "API_KEY": "",
+  "EMAIL_FILE_TYPE": ".msg",
+  "MAX_EMAILS": "50",
+  "EMAIL_INIT": "1",
+  "MAX_NREQUEST_OPENAI": "50",
+  "MINIMUM_KEY_COUNT": 5,
+  "PATH_EMAILS_MSG": "C:/Emails",
+  "PATH_EMAILS_EML": "C:/UOC/Master Data Science/TFM/2023/IMPLEMENTACION/Python/procesarFacturas/data/EMails/eml",
+  "PATH_TESSERACT": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+  "PATH_EXPORT_XLS": "C:\\UOC\\Master Data Science\\TFM\\2023\\IMPLEMENTACION\\Python\\procesarFacturas\\data\\Results",
+  "TYPE_CONTENT": "combined",
+  "FILE_LOGS": "C:\\UOC\\Master Data Science\\TFM\\2023\\IMPLEMENTACION\\Python\\procesarFacturas\\data\\logs\\error_logs.txt",
+  "PROMPTS": [
+    {
+      "ID": "INV_M_P_1",
+      "LABEL": "INVOICE_MAIN",
+      "PROMPT": "You are an AI trained to extract and validate specific information from invoice-related texts in both English and Spanish. Please analyze the text below and provide the results in JSON format. The information to extract includes: Total, Subtotal, Order Date, Numbering, Buyer, Seller, Purchase Date, Country, City, and Email. When extracting the information, ensure that the column labels remain consistent across all responses. For example, given the input text: 'Order No. 12345, Buyer: John Doe, Seller: Acme Inc., Total: $100', the expected output is: '{\"Order No\": \"12345\", \"Buyer\": \"John Doe\", \"Seller\": \"Acme Inc.\", \"Total\": \"$100\"}'. \\n\\nPlease provide the response as a single JSON object without any additional text.\\n\\nText:\\n"
+    },
+    {
+      "ID": "INV_D_P_1",
+      "LABEL": "INVOICE_DETAIL",
+      "PROMPT": "You are an AI trained to extract and validate specific information from multiple invoice line item details in texts, in both English and Spanish. Please analyze the text below and provide the results in JSON format. The information to extract includes: Description, Brand, Quantity, Unit of Measure, Price, and Total Line. When extracting the information, ensure that the column labels remain consistent across all responses, and the JSON output is formatted correctly. For example, given the input text: 'Description: BS465N70 O-Ring, Brand: Brammer, Quantity: 90, Unit of Measure: each, Price: 4.67, Total Line: 420.30', the expected output is: '[{\"Description\": \"BS465N70 O-Ring\", \"Brand\": \"Brammer\", \"Quantity\": 90, \"Unit of Measure\": \"each\", \"Price\": \"4.67\", \"Total Line\": \"420.30\"}]'. Please provide the response as a single JSON object or array without any additional text.\\n\\nText:\\n"
+    },
+    {
+      "ID": "ORD_M_P_1",
+      "LABEL": "ORDER_MAIN",
+      "PROMPT": "You are an AI trained to extract and validate specific information from purchase order-related texts in both English and Spanish. Please analyze the text below and provide the results in JSON format. The information to extract includes 'Order Number': value, 'Order Date': value, 'Buyer': value, 'Seller': value, 'Country': value, 'City': value. The 'Country' and 'City' values should correspond to the same geographical region within a country. Each field in the JSON response should be formatted as 'Field': value, even if the value is null. For example, given the input text: 'Order No. 12345, Buyer: John Doe, Seller: Acme Inc.', the expected output is: '{\"Order Number\": \"12345\", \"Buyer\": \"John Doe\", \"Seller\": \"Acme Inc.\"}'. Please provide the response as a single JSON object without any additional text.\\n\\nText:\\n"
+    },
+    {
+      "ID": "ORD_D_P_1",
+      "LABEL": "ORDER_DETAIL",
+      "PROMPT": "You are an AI trained to extract and validate specific information from multiple purchase order line item details in texts, in both English and Spanish. Please analyze the text below and provide the results in JSON format. The information to extract includes 'Description': value, 'Brand': value, 'Quantity': value, 'Unit of Measure': value, 'Unit Price': value, 'Total Line': value. Each field in the JSON response should be formatted as 'Field': value, even if the value is null. For example, given the input text: 'Description: BS465N70 O-Ring, Brand: Brammer, Quantity: 90, Unit of Measure: each, Unit Price: 4.67, Total Line: 420.3', the expected output is: '[{\"Description\": \"BS465N70 O-Ring\", \"Brand\": \"Brammer\", \"Quantity\": 90, \"Unit of Measure\": \"each\", \"Unit Price\": \"4.67\", \"Total Line\": \"420.3\"}]'. Please provide the response as a single JSON object or array without any additional text.\\n\\nText:\\n"
+    }
+  ],
+  "OPTIONAL_PROMPTS": [
+    {
+      "ID": "INV_M_O_1",
+      "LABEL": "INVOICE_MAIN",
+      "PROMPT": "You have been programmed as an AI with the capability to parse and validate data from invoice documents in English and Spanish. Please read the following text and generate a JSON formatted response. Information to look for includes: Total, Subtotal, Order Date, Numbering, Buyer, Seller, Purchase Date, Country, City, and Email. Ensure consistency in your output. Text:"
+    },
+    {
+      "ID": "INV_M_O_2",
+      "LABEL": "INVOICE_MAIN",
+      "PROMPT": "As an AI, your training enables you to extract specific information from invoice-related texts in both English and Spanish. Review the text below and produce the results in a JSON format. Search for: Total, Subtotal, Order Date, Numbering, Buyer, Seller, Purchase Date, Country, City, and Email. Maintain consistent labeling in your output. Text:"
+    },
+    {
+      "ID": "INV_M_O_3",
+      "LABEL": "INVOICE_MAIN",
+      "PROMPT": "Your AI training empowers you to decipher specific information from invoice texts in English and Spanish. Analyze the below text and output the results in JSON format. The necessary information includes: Total, Subtotal, Order Date, Numbering, Buyer, Seller, Purchase Date, Country, City, and Email. Ensure uniform labels across all responses. Text:"
+    },
+    {
+      "ID": "INV_D_O_1",
+      "LABEL": "INVOICE_DETAIL",
+      "PROMPT": "You are an AI designed to extract and confirm specific information from invoice line item details in both English and Spanish. Please scrutinize the text below and produce the results in a JSON format. The necessary details are: Description, Brand, Quantity, Unit of Measure, Price, and Total Line. Ensure the output is formatted correctly and labels are consistent. Text:"
+    },
+    {
+      "ID": "INV_D_O_2",
+      "LABEL": "INVOICE_DETAIL",
+      "PROMPT": "As an AI, your capabilities include extracting specific data from invoice line items in English and Spanish. Evaluate the following text and output the results in JSON format. You are looking for: Description, Brand, Quantity, Unit of Measure, Price, and Total Line. Maintain uniform labeling and correct JSON format. Text:"
+    },
+    {
+      "ID": "INV_D_O_3",
+      "LABEL": "INVOICE_DETAIL",
+      "PROMPT": "Your AI programming allows you to draw specific data from the details of invoice line items in English and Spanish. Examine the text below and present the results in JSON format. The details to be looked for include: Description, Brand, Quantity, Unit of Measure, Price, and Total Line. Consistency in labeling and correct JSON formatting is crucial. Text:"
+    },
+    {
+      "ID": "ORD_M_O_1",
+      "LABEL": "ORDER_MAIN",
+      "PROMPT": "You are an AI designed to extract and confirm specific details from purchase order-related texts in English and Spanish. Please scrutinize the text below and produce the results in JSON format. The details include: 'Order Number', 'Order Date', 'Buyer', 'Seller', 'Country', 'City'. Ensure the extracted values match the geographical region. Text:"
+    },
+    {
+      "ID": "ORD_M_O_2",
+      "LABEL": "ORDER_MAIN",
+      "PROMPT": "As an AI, your task is to extract and validate specific details from purchase order texts in English and Spanish. Evaluate the text below and present the results in JSON format. These details are: 'Order Number', 'Order Date', 'Buyer', 'Seller', 'Country', 'City'. Ensure the 'Country' and 'City' are in the same region. Text:"
+    },
+    {
+      "ID": "ORD_M_O_3",
+      "LABEL": "ORDER_MAIN",
+      "PROMPT": "As an AI, your role includes sifting out specific information from texts related to purchase orders in English and Spanish. Carefully analyze the text below and generate results in a JSON format. These details include: 'Order Number', 'Order Date', 'Buyer', 'Seller', 'Country', 'City'. The 'Country' and 'City' should belong to the same geographical region. Text:"
+    },
+    {
+      "ID": "ORD_D_O_1",
+      "LABEL": "ORDER_DETAIL",
+      "PROMPT": "You're an AI trained to parse and validate specific details from multiple line items of purchase orders in English and Spanish. Analyze the provided text and generate the results in a JSON format. The data includes: 'Description', 'Brand', 'Quantity', 'Unit of Measure', 'Unit Price', 'Total Line'. Maintain consistent labeling and correct formatting in your JSON output. Text:"
+    },
+    {
+      "ID": "ORD_D_O_2",
+      "LABEL": "ORDER_DETAIL",
+      "PROMPT": "As an AI, your training enables you to extract specific details from multiple line items in purchase order texts, in both English and Spanish. Carefully examine the following text and present the results in JSON format. The details you should look for include: 'Description', 'Brand', 'Quantity', 'Unit of Measure', 'Unit Price', 'Total Line'. Keep the labels consistent and the JSON correctly formatted in your response. Text:"
+    },
+    {
+      "ID": "ORD_D_O_3",
+      "LABEL": "ORDER_DETAIL",
+      "PROMPT": "Your AI capabilities include pulling specific details from multiple line items of purchase orders, in both English and Spanish. Scrutinize the text provided and generate a JSON formatted output. These details include: 'Description', 'Brand', 'Quantity', 'Unit of Measure', 'Unit Price', 'Total Line'. Ensure consistent labels and correct JSON format in your output. Text:"
+    }
+  ],
+  "PROMPTS_HISTORY": {
+    "PROMPT": [
+      "You are an AI trained to extract and validate specific information from invoice-related texts in both English and Spanish. Please analyze the text below and provide the results in JSON format. The information to extract includes: Total, Subtotal, Order Date, Numbering, Buyer, Seller, Purchase Date, Country, City, and Email. When extracting the information, ensure that the column labels remain consistent across all responses. For example, given the input text: 'Order No. 12345, Buyer: John Doe, Seller: Acme Inc., Total: $100', the expected output is: '{\"Order No\": \"12345\", \"Buyer\": \"John Doe\", \"Seller\": \"Acme Inc.\", \"Total\": \"$100\"}'. \\n\\nPlease provide the response as a single JSON object without any additional text.\\n\\nText:\\n"
+    ],
+    "PROMPT_DETAIL": [
+      "You are an AI trained to extract and validate specific information from multiple invoice line item details in texts, in both English and Spanish. Please analyze the text below and provide the results in JSON format. The information to extract includes: Description, Brand, Quantity, Unit of Measure, Price, and Total Line. When extracting the information, ensure that the column labels remain consistent across all responses, and the JSON output is formatted correctly. For example, given the input text: 'Description: BS465N70 O-Ring, Brand: Brammer, Quantity: 90, Unit of Measure: each, Price: 4.67, Total Line: 420.30', the expected output is: '[{\"Description\": \"BS465N70 O-Ring\", \"Brand\": \"Brammer\", \"Quantity\": 90, \"Unit of Measure\": \"each\", \"Price\": \"4.67\", \"Total Line\": \"420.30\"}]'. Please provide the response as a single JSON object or array without any additional text.\\n\\nText:\\n"
+    ],
+    "PROMPT_ORDER": [
+      "You are an AI trained to extract and validate specific information from purchase order-related texts in both English and Spanish. Please analyze the text below and provide the results in JSON format. The information to extract includes 'Order Number': value, 'Order Date': value, 'Buyer': value, 'Seller': value, 'Country': value, 'City': value. The 'Country' and 'City' values should correspond to the same geographical region within a country. Each field in the JSON response should be formatted as 'Field': value, even if the value is null. For example, given the input text: 'Order No. 12345, Buyer: John Doe, Seller: Acme Inc.', the expected output is: '{\"Order Number\": \"12345\", \"Buyer\": \"John Doe\", \"Seller\": \"Acme Inc.\"}'. Please provide the response as a single JSON object without any additional text.\\n\\nText:\\n"
+    ],
+    "PROMPT_DETAIL_ORDER": [
+      "You are an AI trained to extract and validate specific information from multiple purchase order line item details in texts, in both English and Spanish. Please analyze the text below and provide the results in JSON format. The information to extract includes 'Description': value, 'Brand': value, 'Quantity': value, 'Unit of Measure': value, 'Unit Price': value. Each field in the JSON response should be formatted as 'Field': value, even if the value is null. For example, given the input text: 'Description: BS465N70 O-Ring, Brand: Brammer, Quantity: 90, Unit of Measure: each, Unit Price: 4.67', the expected output is: '[{\"Description\": \"BS465N70 O-Ring\", \"Brand\": \"Brammer\", \"Quantity\": 90, \"Unit of Measure\": \"each\", \"Unit Price\": \"4.67\"}]'. Please provide the response as a single JSON object or array without any additional text.\\n\\nText:\\n",
+      "Aou are an AI trained to extract and validate specific information from multiple purchase order line item details in texts, in both English and Spanish. Please analyze the text below and provide the results in JSON format. The information to extract includes 'Description': value, 'Brand': value, 'Quantity': value, 'Unit of Measure': value, 'Unit Price': value. Each field in the JSON response should be formatted as 'Field': value, even if the value is null. For example, given the input text: 'Description: BS465N70 O-Ring, Brand: Brammer, Quantity: 90, Unit of Measure: each, Unit Price: 4.67', the expected output is: '[{\"Description\": \"BS465N70 O-Ring\", \"Brand\": \"Brammer\", \"Quantity\": 90, \"Unit of Measure\": \"each\", \"Unit Price\": \"4.67\"}]'. Please provide the response as a single JSON object or array without any additional text. Your task is to parse the following text and return the output in a JSON formatted string. Text:"
+    ]
+  }
+}
